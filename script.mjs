@@ -29,6 +29,7 @@ function changeheader(){
 // Import all external constants & functions required
 /***************************************************************/
 // Import all the constants & functions required from fb_io module
+console.log("I'm going to import")
 import { fb_initialise, fb_authenticate,fb_detectLoginChange,fb_logOut,fb_writeRecord,
     fb_readRecord,fb_readAll, fb_updateRecord, fb_read_sorted
  }
@@ -43,4 +44,6 @@ import { fb_initialise, fb_authenticate,fb_detectLoginChange,fb_logOut,fb_writeR
     window.fb_updateRecord  = fb_updateRecord;
     window.fb_read_sorted = fb_read_sorted;
 
+    console.log("hello hello")
+    fb_initialise();
 
