@@ -1,0 +1,2 @@
+console.log('%c what you want to say on the console ',
+                'color: ' + COL_C + '; background-color: ' + COL_B + ';');
