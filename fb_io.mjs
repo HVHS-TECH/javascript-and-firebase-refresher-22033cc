@@ -69,8 +69,22 @@ function fb_initialise() {
 //
  ****************************************************************/
 function fb_authenticate() {
-console.log('fb_authenticate ',
+    console.log('fb_authenticate ',
                 'color: ' + COL_C + '; background-color: ' + COL_B + ';');
+    const AUTH = getAuth();
+
+    const PROVIDER = new GoogleAuthProvider();
+    // The following makes Google ask the user to select the account
+    PROVIDER.setCustomParameters({
+        prompt: 'select_account'
+    });
+    signInWithPopup(AUTH, PROVIDER).then((result) => {
+        console.log("THE AUTHENTICATION WAS SUCDCESSFULL")     
+    })
+    .catch((error) => {
+        console.log("THIS IS AN ERROR WITH AUTHENTICATING")
+    });
+
 }
 
 /***************************************************************
