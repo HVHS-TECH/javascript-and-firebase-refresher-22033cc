@@ -63,7 +63,6 @@ function fb_initialise() {
 
 }
 
-
 /***************************************************************
 // function fb_authenticate()
 //
