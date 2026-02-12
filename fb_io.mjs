@@ -46,8 +46,21 @@ export {
 // intatilises connecting to firebase
  ****************************************************************/
 function fb_initialise() {
-console.log('fb_initialise ',
+    console.log('fb_initialise ',
                 'color: ' + COL_C + '; background-color: ' + COL_B + ';');
+    const FB_GAMECONFIG = {
+        apiKey: "AIzaSyBVWKOTOShkaWo4VevhGlPLN_YsdNH98So",
+        authDomain: "comp-e16ea.firebaseapp.com",
+        databaseURL: "https://comp-e16ea-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "comp-e16ea",
+        storageBucket: "comp-e16ea.firebasestorage.app",
+        messagingSenderId: "165553586665",
+        appId: "1:165553586665:web:607df0b6514d45c9764b78"
+    };
+    const FB_GAMEAPP = initializeApp(FB_GAMECONFIG);
+    fb_Db= getDatabase(FB_GAMEAPP);
+    console.info(fb_Db);         	
+
 }
 
 

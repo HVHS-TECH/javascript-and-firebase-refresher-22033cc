@@ -17,14 +17,18 @@ function buttonchange(){
     console.log("this button is working");
 }
 
+window.buttonchange = buttonchange;
+
 function changeheader(){
     
     header = document.getElementById("headerInput").value;
 
 
     document.getElementById("welcomeMessage").innerHTML = header;
-    console.log("headerchanged")
+    console.log("headerchanged");
 }
+
+window.changeheader = buttonchange;
 
 /***************************************************************/
 // Import all external constants & functions required
@@ -44,4 +48,5 @@ import { fb_initialise, fb_authenticate,fb_detectLoginChange,fb_logOut,fb_writeR
     window.fb_updateRecord  = fb_updateRecord;
     window.fb_read_sorted = fb_read_sorted;
 
-
+console.log("hello");
+fb_initialise();
